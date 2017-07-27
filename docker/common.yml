@@ -1,0 +1,7 @@
+version: '2'
+services:
+  sugarapp:
+    ports:
+      - "8080:80"
+  mysql:
+    image: 
