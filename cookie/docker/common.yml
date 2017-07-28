@@ -1,0 +1,13 @@
+version: '2'
+services:
+  sugarapp:
+    ports:
+      - "8080:80"
+  mysql:
+    image: mysql:
+  elastisearch:
+    ports:
+      - "9200:9200"
+    image: itzg/elasticsearch:1.4
+  files:
+    image: 

@@ -1,9 +1,9 @@
 version: '2'
 services:
-  dockerapp:
+  sugarpp:
     extends:
       file: common.yml
-      service: sugarapp
+      service: sugarapp_php56
     image: sugarsmith/sugarcontainer
     environment:
       - constraint:node==master
@@ -18,6 +18,14 @@ services:
       service: mysql
     networks:
       - sugarnet
+
+  elasticsearch:
+    extends:
+      file: common.yml
+      service: elasticsearch
+    networks:
+      - sugarnet
+
 
 networks:
   sugarnet:
