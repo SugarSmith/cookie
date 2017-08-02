@@ -1,0 +1,16 @@
+version: '2'
+services:
+  sugarapp:
+    ports:
+      - "8080:80"
+  mysql:
+    image: mysql
+  elasticsearch:
+    ports:
+      - "9500:9200"
+    image: sugarsmith/elasticsearch144:v0.2
+networks:
+  default:
+    driver: bridge
+  #files:
+  #  image:
